@@ -6,7 +6,7 @@ function Items(props) {
 const [Clicked, setClicked] = useState(false);
 
 function handleClick(){
-  setClicked(true);
+  Clicked?setClicked(false):setClicked(true);
 }
 
 
