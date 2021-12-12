@@ -5,7 +5,7 @@ function App() {
   // 
   const [list, setList] = useState();
   const [objs, setObjs] = useState([]);
-  const [Cut, setCut] = useState(false)
+
 
   //saving state
   function saveCurrent(event) {
@@ -22,10 +22,11 @@ function App() {
 
   }
 
-  function handleCut(){
-    setCut(true)
-
+  function deleteItem(){
+    console.log('working')
   }
+
+ 
 
   
 
@@ -45,7 +46,7 @@ function App() {
         <ul>
           {
           objs.map(x => 
-          <Items  item={x} />)}
+          <Items onChecked={deleteItem} item={x} />)}
 
         </ul>
       </div>
