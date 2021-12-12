@@ -22,8 +22,8 @@ function App() {
 
   }
 
-  function deleteItem(){
-    console.log('working')
+  function deleteItem(id){
+    console.log(id)
   }
 
  
@@ -45,8 +45,8 @@ function App() {
       <div>
         <ul>
           {
-          objs.map(x => 
-          <Items onChecked={deleteItem} item={x} />)}
+          objs.map((x,index) => 
+          <Items key ={index} id={index} onChecked={deleteItem} item={x} />)}
 
         </ul>
       </div>

@@ -6,7 +6,8 @@ function Items(props) {
 
   return (
     <>
-      <li onClick={props.onChecked}> 
+      <li onClick={() => 
+        props.onChecked(props.id)}> 
       {props.item }</li>
     </>
   );
