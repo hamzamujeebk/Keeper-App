@@ -5,6 +5,7 @@ function App() {
   // 
   const [list, setList] = useState();
   const [objs, setObjs] = useState([]);
+  const [Cut, setCut] = useState(false)
 
   //saving state
   function saveCurrent(event) {
@@ -20,6 +21,13 @@ function App() {
     setList("")
 
   }
+
+  function handleCut(){
+    setCut(true)
+
+  }
+
+  
 
   return (
     <div className="container">
@@ -37,10 +45,11 @@ function App() {
         <ul>
           {
           objs.map(x => 
-          <Items item={x} />)}
+          <Items  item={x} />)}
 
         </ul>
       </div>
+     
     </div>
   );
 }
