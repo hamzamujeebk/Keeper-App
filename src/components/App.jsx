@@ -23,7 +23,13 @@ function App() {
   }
 
   function deleteItem(id){
-    console.log(id)
+    setObjs(prev => {
+      return prev.filter(
+        (item, index) => {
+            return  index !==id;
+        }
+      )
+    })
   }
 
  
