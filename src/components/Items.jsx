@@ -1,9 +1,21 @@
-import React from "react";
+
+import React, {useState}  from "react";
 
 function Items(props) {
+
+const [Clicked, setClicked] = useState(false);
+
+function handleClick(){
+  setClicked(true);
+}
+
+
+
   return (
     <>
-      <li> {props.item }</li>
+      <li onClick={handleClick}
+       style={{textDecoration:Clicked?'line-through':null}}> 
+      {props.item }</li>
     </>
   );
 }
